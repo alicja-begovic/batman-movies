@@ -15,3 +15,12 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDg690NXmhqpO3AnXhuR_cyPBaFa1GdWjs",
+  authDomain: "test-de3f5.firebaseapp.com",
+  projectId: "test-de3f5",
+  storageBucket: "test-de3f5.appspot.com",
+  messagingSenderId: "526001346743",
+  appId: "1:526001346743:web:7b9719bd470e7d2b5bd532"
+};
