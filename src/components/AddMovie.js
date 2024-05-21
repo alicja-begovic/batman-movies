@@ -1,11 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
+
+import classes from "./AddMovie.module.css";
 
 function AddMovie(props) {
-  const titleRef = useRef('');
-  const descriptionRef = useRef('');
-  const releaseDateRef = useRef('');
-  const countryRef = useRef('');
-  const universeRef = useRef('');
+  const titleRef = useRef("");
+  const descriptionRef = useRef("");
+  const releaseDateRef = useRef("");
+  const countryRef = useRef("");
+  const universeRef = useRef("");
 
   function submitHandler(event) {
     event.preventDefault();
@@ -17,7 +19,7 @@ function AddMovie(props) {
       description: descriptionRef.current.value,
       releaseDate: releaseDateRef.current.value,
       country: countryRef.current.value,
-      universe: universeRef.current.value,  
+      universe: universeRef.current.value,
     };
 
     props.onAddMovie(movie);
@@ -25,25 +27,25 @@ function AddMovie(props) {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>
-        <label htmlFor='title'>Title</label>
-        <input type='text' id='title' ref={titleRef} />
+      <div className={classes.control}>
+        <label htmlFor="title">Title</label>
+        <input type="text" id="title" ref={titleRef} />
       </div>
-      <div >
-        <label htmlFor='opening-text'>Opening Text</label>
-        <textarea rows='5' id='opening-text' ref={descriptionRef}></textarea>
+      <div className={classes.control}>
+        <label htmlFor="opening-text">Opening Text</label>
+        <textarea rows="5" id="opening-text" ref={descriptionRef}></textarea>
       </div>
-      <div >
-        <label htmlFor='date'>Release Date</label>
-        <input type='text' id='date' ref={releaseDateRef} />
+      <div className={classes.control}>
+        <label htmlFor="date">Release Date</label>
+        <input type="text" id="date" ref={releaseDateRef} />
       </div>
-      <div >
-        <label htmlFor='date'>Country</label>
-        <input type='text' id='year' ref={countryRef} />
+      <div className={classes.control}>
+        <label htmlFor="date">Country</label>
+        <input type="text" id="year" ref={countryRef} />
       </div>
-      <div >
-        <label htmlFor='date'>Universe</label>
-        <input type='text' id='universe' ref={universeRef} />
+      <div className={classes.control}>
+        <label htmlFor="date">Universe</label>
+        <input type="text" id="universe" ref={universeRef} />
       </div>
       <button>Add Movie</button>
     </form>
@@ -51,7 +53,6 @@ function AddMovie(props) {
 }
 
 export default AddMovie;
-
 
 /*
 
